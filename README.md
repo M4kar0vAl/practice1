@@ -178,6 +178,40 @@ Git хранит таблицу соответствий `хеш -> информ
 6. Сделали коммит. Состояния: **tracked**.
 7. Повторили пункты 4-7 много-много раз.
 
+### `git status`
+
+Чтобы узнать текущее состояние репозитория можно использовать команду `git status`.
+
+`git status` подсказывает, какие команды можно выполнить, чтобы поменять состояние файла.
+
+#### Какие состояния показывает `git status`
+
+- **staged** (Changes to be committed в выводе `git status`);
+- **modified** (Changes not staged for commit);
+- **untracked** (Untracked files).
+
+#### Варианты вывода `git status`
+
+1. Нет ни **staged**-, ни **modified**-, ни **untracked**-файлов
+   - nothing to commit, working tree clean
+2. Найдены неотслеживаемые файлы
+   - Untracked files: # найдены неотслеживаемые файлы<br>
+  (use "git add <file>..." to include in what will be committed)
+   - После `git add`:<br>Changes to be committed: # новая секция<br>
+  (use "git restore --staged <file>..." to unstage)
+3. Найдены изменения, которые не войдут в коммит
+   - Changes not staged for commit: # ещё одна секция<br>
+  (use "git add <file>..." to update what will be committed)<br>
+  (use "git restore <file>..." to discard changes in working directory)
+4. Файл добавлен в staging area, но после этого изменён
+   - Changes to be committed:<br>
+  (use "git restore --staged <file>..." to unstage)<br>
+          modified:   fileA.txt<br><br>
+     Changes not staged for commit:<br>
+  (use "git add <file>..." to update what will be committed)<br>
+  (use "git restore <file>..." to discard changes in working directory)<br>
+          modified:   fileA.txt 
+
 ## Основные команды
 
 `git init` - **инициализировать** репозиторий в текущей папке  
