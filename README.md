@@ -164,7 +164,7 @@ Git хранит таблицу соответствий `хеш -> информ
       staged --> tracked: git commit
       staged --> modified: именения
       modified --> staged: git add
-      tracked --> modofied: изменения
+      tracked --> modified: изменения
 ```
 
 1. Файл только что создали. Git ещё не отслеживает содержимое этого файла. Состояние: **untracked**.
