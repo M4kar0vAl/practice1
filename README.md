@@ -159,12 +159,12 @@ Git хранит таблицу соответствий `хеш -> информ
 ### Типичный жизненный цикл файла в Git
 
 ```mermaid
-   stateDiagram;
-      untracked --> staged: git add;
-      staged --> tracked: git commit;
-      staged --> modified: именения;
-      modified --> staged: git add;
-      tracked --> modofied: изменения;
+   stateDiagram
+      untracked --> staged: git add
+      staged --> tracked: git commit
+      staged --> modified: именения
+      modified --> staged: git add
+      tracked --> modofied: изменения
 ```
 
 1. Файл только что создали. Git ещё не отслеживает содержимое этого файла. Состояние: **untracked**.
